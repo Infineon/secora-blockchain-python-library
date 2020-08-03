@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 
 def _add_key_label(args):
     reader = args.reader
-    if(False == create_key_label(reader, int(args.key_id), len(args.label) + 2)):
+    if(False == create_key_label(reader, int(args.key_id), len(args.label))):
         logger.debug('Storage for key ' + str(args.key_id) + ' already allocated!')
     update_key_label(reader, int(args.key_id), args.label)
 
